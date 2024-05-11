@@ -26,22 +26,23 @@ html {
   width: 100%;
 }
 
-.about-us,
-.our-project {
+.container__about-us,
+.container__our-project {
   display: flex;
   width: 50%;
   justify-content: center;
   align-items: center;
 }
 
-.our-project a {
+.container__our-project a {
   font-size: 2em;
   font-weight: bolder;
   color: white;
   text-decoration: none;
 }
 
-.about-us a {
+.container__about-us a,
+.container-aboutUs__nav a {
   font-size: 2em;
   font-weight: bolder;
   background: -webkit-linear-gradient(left, #C5EBAA, #F2C18D);
@@ -50,7 +51,7 @@ html {
 
 }
 
-.our-project {
+.container__our-project {
   background-image: linear-gradient(to right top, #a5dd9b, #abe09e, #b1e2a0, #b7e4a3, #bde7a6, #c5e5a2, #cce39f, #d3e19c, #ddd994, #e5d18f, #ecc98d, #f2c18d);
   color: white;
 }
@@ -63,10 +64,142 @@ html {
     width: 100%;
   }
 
-  .about-us,
-  .our-project {
+  .container__about-us,
+  .container__our-project {
     height: 50%;
     width: 100%;
   }
 
 }
+
+/*------------------ABOUT US-------------------*/
+.container-aboutUs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.container-aboutUs__nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.container-aboutUs__nav-button {
+  margin: 5px;
+}
+
+.container-aboutUs__profiles {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+
+
+}
+
+.alice-profile,
+.gabriela-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+
+.alice-profile {
+  background-image: linear-gradient(to right top, #a5dd9b, #abe09e, #b1e2a0, #b7e4a3, #bde7a6, #c5e5a2, #cce39f, #d3e19c, #ddd994, #e5d18f, #ecc98d, #f2c18d);
+  color: white;
+  width: 50%;
+}
+
+.gabriela-profile {
+  background-image: linear-gradient(to left top, #a5dd9b, #abe09e, #b1e2a0, #b7e4a3, #bde7a6, #c5e5a2, #cce39f, #d3e19c, #ddd994, #e5d18f, #ecc98d, #f2c18d);
+  color: white;
+  width: 50%;
+}
+
+.container__image {
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.container__image img {
+  object-fit: cover;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #f2c18d;
+}
+
+.container__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*----------*/
+  animation: slideIn 1s forwards;
+
+}
+
+.hidden {
+
+  position: relative;
+  opacity: 0;
+}
+
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.container__paragraph {
+  background-color: white;
+
+  width: 300px;
+  color: #A5DD9B;
+  border-radius: 10px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.github-logo {
+  height: 30px;
+  margin: 10px;
+
+}
+
+
+
+/* 
+.container__heading {
+  position: relative;
+  overflow: hidden;
+ zajistí, aby se nadbytečný obsah skryl 
+  height: 80px;
+  urči výšku kontejneru 
+}
+
+.heading {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  nastav počáteční pozici nadpisu 
+  transform: translateY(-50%);
+  transition: top 0.3s ease;
+   animace přechodu 
+  cursor: pointer;
+  kurzor ukazuje, že je nadpis klikatelný */
+
+
+/*------------------OUR PROJECT-------------------*/
