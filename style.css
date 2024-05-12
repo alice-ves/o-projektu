@@ -42,7 +42,9 @@ html {
 }
 
 .container__about-us a,
-.container-aboutUs__nav a {
+.container-aboutUs__nav a,
+.container__project a,
+.container-project__nav a {
   font-size: 2em;
   font-weight: bolder;
   background: -webkit-linear-gradient(left, #C5EBAA, #F2C18D);
@@ -203,3 +205,111 @@ html {
 
 
 /*------------------OUR PROJECT-------------------*/
+.container-project {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.container-project__nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.container-project__nav-button {
+  margin: 5px;
+}
+
+.container-project__profiles {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+
+
+}
+
+.projectQ1-profile,
+.projectQ2-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+
+.projectQ1-profile {
+  background-image: linear-gradient(to right top, #a5dd9b, #abe09e, #b1e2a0, #b7e4a3, #bde7a6, #c5e5a2, #cce39f, #d3e19c, #ddd994, #e5d18f, #ecc98d, #f2c18d);
+  color: white;
+  width: 50%;
+}
+
+.projectQ2-profile {
+  background-image: linear-gradient(to left top, #a5dd9b, #abe09e, #b1e2a0, #b7e4a3, #bde7a6, #c5e5a2, #cce39f, #d3e19c, #ddd994, #e5d18f, #ecc98d, #f2c18d);
+  color: white;
+  width: 50%;
+}
+
+.container__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 150px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  border: 2px solid #f2c18d;
+  z-index: 0;
+}
+
+.container__image i {
+  color:black;
+  z-index: 2;
+}
+
+.container__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*----------*/
+  animation: slideIn 1s forwards;
+
+}
+
+.hidden {
+
+  position: relative;
+  opacity: 0;
+}
+
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.container__paragraph {
+  background-color: white;
+
+  width: 300px;
+  color: #A5DD9B;
+  border-radius: 10px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+
+
+
