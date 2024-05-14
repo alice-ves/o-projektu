@@ -168,3 +168,27 @@ html {
   margin: 10px;
 
 }
+
+
+
+
+@media (max-width: 768px) {
+
+  .container-aboutUs__profiles,
+  .container-project__profiles {
+    flex-direction: column;
+
+  }
+
+  .alice-profile,
+  .projectQ1-profile {
+    width: 100%;
+  }
+
+  .gabriela-profile,
+  .projectQ2-profile {
+    width: 100%;
+    background-image: linear-gradient(to right bottom, #a5dd9b, #abe09e, #b1e2a0, #b7e4a3, #bde7a6, #c5e5a2, #cce39f, #d3e19c, #ddd994, #e5d18f, #ecc98d, #f2c18d);
+  }
+}
+}
